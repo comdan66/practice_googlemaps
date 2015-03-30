@@ -7,6 +7,18 @@ $(function() {
   var $map = $('#map');
   var map  = null;
 
+  function animateCircle() {
+    var count = 0;
+
+    window.setInterval (function() {
+      count = (count + 1) % 200;
+
+      var icons = line.get('icons');
+      icons[0].offset = (count / 2) + '%';
+      line.set('icons', icons);
+    }, 10);
+  }
+
   function initialize () {
 
     var mapOptions = {
@@ -21,28 +33,27 @@ $(function() {
     };
     map = new google.maps.Map ($map.get (0), mapOptions);
 
-    var citymap = {};
+    var lineCoordinates = [
+      new google.maps.LatLng (23.568596231491233, 120.3035703338623),
+      new google.maps.LatLng (23.569596231491233, 120.3035703338623),
+      new google.maps.LatLng (23.568596231491233, 120.3135703338623)
+    ];
 
-    citymap['chicago'] = {
-      center: new google.maps.LatLng(23.568596231491233, 120.3035703338623),
-      population: 10
+    var lineSymbol = {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 8,
+      strokeColor: '#393'
     };
+    line = new google.maps.Polyline ({
+      path: lineCoordinates,
+      icons: [{
+        icon: lineSymbol,
+        offset: '100%'
+      }],
+      map: map
+    });
 
-    for (var city in citymap) {
-      var populationOptions = {
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: 'rgba(39, 40, 34, .4)',
-        fillOpacity: 0.35,
-        map: map,
-        center: citymap[city].center,
-        draggable: true,
-        radius: Math.sqrt(citymap[city].population) * 100
-      };
-      // Add the circle for this city to the map.
-      cityCircle = new google.maps.Circle(populationOptions);
-    }
+    animateCircle();
 
   }
 
