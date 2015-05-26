@@ -1,5 +1,5 @@
-# Welcome To OA's richman!
-這是一個使用 google maps api 製作的**大富翁遊戲**！ 
+# Welcome To OA's F2E Framework!
+OA 個人常用的前端工具總集合！ 
 
 ---
 ## 聲明
@@ -8,14 +8,7 @@
 
 <br/>
 ## 簡介
-* 這是一個前端 **大富翁遊戲** 設計，主要架構於 [jQuery](http://jquery.com/)以及[scss、sass](http://compass-style.org/)。  
-
-* 基本上是利用 google maps 的 **markers** 以及 **Polyline** 所建置出路線、節點、角色... 等設計！
-
-* 未來將會畫出連線、計分、蓋房..等，如有興趣者歡迎至 [GitHub](https://github.com/comdan66/OA-richman/) 下載，非常歡迎討論與分享！
-
-* Demo 範例頁面: [http://comdan66.github.io/OA-richman/](http://comdan66.github.io/OA-richman/)
-
+* 個人習慣工具，有興趣的參考吧！
 
 <br/>
 ## 關於
@@ -23,14 +16,10 @@
 
 * E-mail - <comdan66@gmail.com>
 
-* 作品名稱 - OA-richman
+* 作品名稱 - OA's F2E Framework
 
 * 最新版本 - 1.0.1
 
-* GitHub - [OA-richman](https://github.com/comdan66/OA-richman/)
+* GitHub - [OA's F2E Framework](https://github.com/comdan66/f2e/)
 
-* 相關資源 - [Google Maps API](https://developers.google.com/maps/documentation/javascript/markers)
-
-* 其他參考 - [Dice](http://codepen.io/pukidepa/pen/ebgHy)
-
-* 更新日期 - 2015/05/05
+* 更新日期 - 2015/05/26
